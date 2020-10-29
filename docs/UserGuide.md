@@ -265,7 +265,9 @@ Optional fields:
 * **BUDGET** 💵: Planned budget for the itinerary, can only contain a non-negative number up to two decimal places. Use this to plan how much to spend on your trip.
 Examples:
 * `add-itinerary n/Europe Trip sd/01-12-2020 ed/20-12-2020`
-* `add-itinerary n/Japan holiday sd/15-01-2019 ed/30-01-2019 d/with friends b/4000 `
+* `add-itinerary n/Japan holiday sd/15-01-2019 ed/30-01-2019 d/with friends b/4000`<br><br>
+![result for 'add-itinerary'](images/addItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 11. The result of <code>add-itinerary n/Japan holiday sd/15-01-2019 ed/30-01-2019 d/with friends b/4000</code></i></sup></div>
 
 #### 4.4.2 Editing an itinerary: `edit-itinerary`
 
@@ -280,7 +282,11 @@ Format: `edit-itinerary INDEX [n/NAME] [sd/START_DATE] [ed/END_DATE] [d/DESCRIPT
 * Any field can be changed by inputting its corresponding prefix in the command.
 
 Example: 
-* `add-itinerary n/Europe Trip sd/01-12-2020 ed/20-12-2020` in an itinerary list followed by `edit-itinerary 1 sd/06-12-2020` changes the start date of the 1st itinerary in the list from `01-12-2020` to `06-12-2020`.
+* `add-itinerary n/Europe Trip sd/01-12-2020 ed/20-12-2020` in an itinerary list 
+followed by `edit-itinerary 1 sd/06-12-2020` changes the start date of the 1st itinerary in the list 
+from `01-12-2020` to `06-12-2020`.<br><br>
+![result for 'edit-itinerary'](images/editItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 12. The result of <code>edit-itinerary 1 sd/06-12-2020</code></i></sup></div>
 
 #### 4.4.3 Deleting an itinerary: `delete-itinerary`
 
@@ -293,7 +299,9 @@ Format: `delete-itinerary INDEX`
 * The index **must be a positive number** 1, 2, 3, …​
 
 Examples:
-* `list-itinerary` followed by `delete 2` deletes the 2nd itinerary from the list.
+* `list-itinerary` followed by `delete-itinerary 2` deletes the 2nd itinerary from the list.<br><br>
+![result for 'delete-itinerary'](images/deleteItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 13. The result of <code>delete-itinerary 2</code></i></sup></div>
 
 #### 4.4.4 Finding an itinerary: `find-itinerary`
 
@@ -307,13 +315,18 @@ Format: `find-itinerary KEYWORD [MORE_KEYWORDS]`
 * Only full words will be matched e.g. `Jap` will not match `Japan`
 
 Examples:
-* `find-itinerary Japan` returns `Japan Okinawa` and `Japan Tokyo`<br>
+* `find-itinerary Japan` returns `Japan Okinawa` and `Japan Tokyo`<br><br>
+![result for 'find-itinerary'](images/findItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 14. The result of <code>find-itinerary Japan</code></i></sup></div>
 
 #### 4.4.5 Listing all itineraries: `list-itinerary`
 
-Shows all itineraries.
+Shows all itineraries. Use this command to reset the view of the Itineraries panel, as 
+certain commands (`find-itinerary`, `select-itinerary`) can alter the view of the Itineraries panel. 
 
-Format: `list-itinerary`
+Format: `list-itinerary`<br><br>
+![result for 'list-itinerary'](images/listItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 15. The result of <code>list-itinerary</code></i></sup></div>
 
 #### 4.4.6 Selecting an itinerary: `select-itinerary`
 
@@ -326,7 +339,9 @@ Format: `select-itinerary INDEX`
 * The index **must be a positive number** 1, 2, 3, …​
 
 Examples:
-* `select-itinerary 3` selects the 3rd itinerary in the list of itineraries.
+* `select-itinerary 3` selects the 3rd itinerary in the list of itineraries.<br><br>
+![result for 'select-itinerary'](images/selectItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 16. The result of <code>select-itinerary 3</code></i></sup></div>
 
 #### 4.4.7 Clearing all itineraries : `clear-itinerary`
 
@@ -337,7 +352,11 @@ Format: `clear-itinerary`
 <div markdown="span" class="alert alert-danger">:warning: **Warning:**
 `clear-itinerary` will remove all the itineraries stored in TrackPad.
 This action is irreversible and should be used with caution.
-</div>
+</div><br>
+
+![result for 'clear-itinerary'](images/clearItinerary.png)
+<div align="center"><sup style="font-size:100%"><i>Figure 17. The result of <code>clear-itinerary</code></i></sup></div>
+
 
 ### 4.5 Itinerary Attraction Features
 Itinerary attractions are attractions added to an itinerary, but with additional start/end time fields.
